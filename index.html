@@ -20,6 +20,7 @@
     nav {
       background-color: #f5c518;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
       padding: 0.5rem 0;
@@ -51,7 +52,7 @@
       flex-direction: column;
       gap: 1rem;
     }
-    input, textarea, button {
+    input, textarea, button, select {
       padding: 0.75rem;
       border-radius: 6px;
       border: 1px solid #ccc;
@@ -61,6 +62,13 @@
       color: white;
       border: none;
       cursor: pointer;
+    }
+    .testimonial {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
     }
     footer {
       background-color: #1e2a38;
@@ -80,6 +88,7 @@
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#order">Order</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -115,14 +124,39 @@
     <form action="https://formspree.io/f/xwplggzk" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="List the products you'd like to order" required></textarea>
+      <input type="tel" name="phone" placeholder="Contact Number" required>
+      <textarea name="address" rows="3" placeholder="Delivery Address" required></textarea>
+      <input type="text" name="products" placeholder="Product Names & Quantity (e.g., 2 Solar Panels, 1 Fan)" required>
+      <select name="payment" required>
+        <option value="">Select Payment Option</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="Online Payment">Online Payment</option>
+      </select>
       <button type="submit">Submit Order</button>
     </form>
   </section>
 
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Ampvio helped me switch to solar power with ease. Great service and fast installation!"</p>
+      <strong>- Ravi Kumar, Hyderabad</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Affordable electronics and friendly staff. Highly recommend their services!"</p>
+      <strong>- Anjali Mehta, Vijayawada</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Best place for all electrical and solar needs. Quick delivery and genuine products."</p>
+      <strong>- Suresh Reddy, Warangal</strong>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>📍 Address: Your Store Address<br>📞 Phone: 123-456-7890<br>✉️ Email: yourstore@email.com</p>
+    <p>📍 Address: Ampvio Voltsplus Power Solution Pvt. Ltd, Near Salfia Masjid, Bypass Road, Yemmiganur, Andhra Pradesh, India - 518360<br>
+       📞 Phone: 9849794727<br>
+       ✉️ Email: sales.ampviovoltsplus@gmail.com</p>
   </section>
 
   <footer>
